@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import oneImage from "../../img/story/10.jpg";
+import twoImage from "../../img/story/3.jpg";
+import threeImage from "../../img/story/2.jpg";
+import fourImage from "../../img/story/9.jpg";
+---
+
+<Layout title="Serving Opportunities - Capstone Church">
+	<div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-6 mx-auto">
+        <h1 class="fw-bold">SERVING OPPORTUNITIES</h1>
+
+        <hr>
+
+        <p>Here at Capstone, there are many Opportunities to be part of the church service and meet the needs of others in the church by joining the Dream team. Here are some areas you can make a difference.</p>
+
+        <div class="card mb-5 mt-5">
+          <div class="card-body">
+            <h4 class="fw-bold">Celebration Host</h4>
+            <p>Give a warm welcome to people coming into God's house and help them feel at home.</p>
+          </div>
+        </div>
+
+        <div class="card mb-5">
+          <div class="card-body">
+            <h4 class="fw-bold">Creative Ministry</h4>
+            <p>Discover how to use your creative flair to worship God through singing, music, production and multimedia.</p>
+          </div>
+        </div>
+
+        <div class="card mb-5">
+          <div class="card-body">
+            <h4 class="fw-bold">Royal Rangers</h4>
+            <p>Take care of infants and nurture toddlers through bible stories and songs while their parents attend service. Engage with young children and help them experience God's love for them.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-3 mb-3">
+        <img src={oneImage} alt="comImage" width="100%">
+      </div>
+      <div class="col-sm-12 col-md-3 mb-3">
+        <img src={twoImage} alt="comImage" width="100%">
+      </div>
+      <div class="col-sm-12 col-md-3 mb-3">
+        <img src={threeImage} alt="comImage" width="100%">
+      </div>
+      <div class="col-sm-12 col-md-3 mb-3">
+        <img src={fourImage} alt="comImage" width="100%">
+      </div>
+    </div>
+  </div>
+</Layout>

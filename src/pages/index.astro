@@ -1,0 +1,158 @@
+---
+import Layout from "../layouts/Layout.astro";
+import heroImage from "../../img/bg1.jpg";
+import capstoneImage from "../../img/capstone.png";
+import storyImage from "../../img/storyimage.jpg";
+import sundayServiceOne from "../../img/story/4.jpg";
+import sundayServiceTwo from "../../img/story/9.jpg";
+import midweekServiceOne from "../../img/story/1.jpg";
+import midweekServiceTwo from "../../img/story/13.jpg";
+
+const backgroundStyle = `background-image: url(${storyImage}); height: 500px;`;
+---
+
+<style>
+  #hero {
+    background: linear-gradient(-45deg, #ee7752, #2600ff, #e73c7e, #23a6d5, #23d5ab, #000000);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+  }
+
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
+
+<Layout title="Capstone Church">
+  <div class="container-fluid" style="margin-top: -3rem;">
+    <div class="row shadow" id="hero">
+      <div class="col-12 text-center">
+        <div class="d-flex align-items-center justify-content-center flex-wrap rounded" style="opacity: 0.9; padding-top: 10rem; padding-bottom: 10rem;">
+          <div class="my-4 me-sm-0 me-md-4">
+            <h2 class="fw-bold bg-white px-3"><span style="font-size: large;">People becoming</span> THE CHURCH</h2>
+            <h2 class="fw-bold bg-white px-3"><span style="font-size: large;">On the mission</span> WITH JESUS</h2>
+            <h2 class="fw-bold mb-0 bg-white px-3"><span style="font-size: large;">To help heal</span> THE WORLD</h2>
+          </div>
+
+          <img
+            src={capstoneImage}
+            class="img-fluid rounded"
+            width="256"
+            alt="capstone"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mb-5 mt-3">
+    <div class="row mt-5 py-5">
+      <div class="col-md-6 mx-auto text-center">
+        <h2>OUR PRAYER FOR YOU</h2>
+        <h5>Ephesians 1:17-18</h5>
+
+        <hr />
+
+        <h3 class="mb-0">Know God</h3>
+        <p class="fst-italic mb-5 text-secondary">""...That you may know him better"</p>
+
+        <h3 class="mb-0">Find Freedom</h3>
+        <p class="fst-italic mb-5 text-secondary">""...That the eyes of your heart might be englightened"</p>
+
+        <h3 class="mb-0">Know God</h3>
+        <p class="fst-italic mb-5 text-secondary">""...That you may know the hope to which he has called you"</p>
+
+        <h3 class="mb-0">Know God</h3>
+        <p class="fst-italic text-secondary">
+          ""...That you may grasp the immensity of this glorious way of life he
+          has for his people"
+        </p>
+      </div>
+    </div>
+
+    <div class="row mb-5 mt-5">
+      <div class="col-sm-12 col-md-6">
+        <h2 class="mb-0">SUNDAY</h2>
+        <h5>Celebrations</h5>
+
+        <div class="row my-4">
+          <div class="col-sm-12 col-md-6">
+            <img src={sundayServiceOne} alt="sunday service" class="img-fluid shadow-sm rounded">
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <img src={sundayServiceTwo} alt="sunday service" class="img-fluid shadow-sm rounded">
+          </div>
+        </div>
+
+        <p>
+          Our services are a celebration of our awesome God who loves and cares
+          for us. Experience this vibrant atmosphere of God's presence and power
+          through our pre-service prayer, passionate worship, dynamic preaching
+          and a time of receving personal ministry.
+        </p>
+
+        <p>
+          Catch our sermon series and be transformed as you hear the word of God
+          from our pastors and guest speakers from all over the world.
+        </p>
+      </div>
+
+      <div class="col-sm-12 col-md-6">
+        <h2 class="mb-0">MID-WEEK</h2>
+        <h5>Celebrations</h5>
+
+        <div class="row my-4">
+          <div class="col-sm-12 col-md-6">
+            <img src={midweekServiceOne} alt="midweek service" class="img-fluid shadow-sm rounded">
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <img src={midweekServiceTwo} alt="midweek service" class="img-fluid shadow-sm rounded">
+          </div>
+        </div>
+
+        <p>
+          Our mid-week services are designed to help people to continue to
+          experience the presence of God throughout the week and find
+          inspiration to grow.
+        </p>
+
+        <p>
+          Online telugu service every wednesday at 7PM only on Facebook and
+          YouTube. Monthly fasting service both in-person & online on
+          alternative Fridays at 7PM.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg" style={backgroundStyle}>
+          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+            <div>
+              <h3 class="pt-5 mt-5 display-6 lh-1 fw-bold">Come</h3>
+            <h3 class="pt-5 mb-4 display-6 lh-1 fw-bold">Join with us,</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <div style="margin-bottom: -3rem;">
+    <img
+      src={storyImage}
+      alt="Capstone Church Congregation"
+      class="img-fluid"
+    />
+  </div>
+</Layout>
