@@ -1,14 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import heroImage from "../../img/bg1.jpg";
-import capstoneImage from "../../img/capstone.png";
-import storyImage from "../../img/storyimage.jpg";
-import sundayServiceOne from "../../img/story/4.jpg";
-import sundayServiceTwo from "../../img/story/9.jpg";
-import midweekServiceOne from "../../img/story/1.jpg";
-import midweekServiceTwo from "../../img/story/13.jpg";
-
-const backgroundStyle = `background-image: url(${storyImage}); height: 500px;`;
 ---
 
 <style>
@@ -43,7 +34,7 @@ const backgroundStyle = `background-image: url(${storyImage}); height: 500px;`;
           </div>
 
           <img
-            src={capstoneImage}
+            src="/img/capstone.png"
             class="img-fluid rounded"
             width="256"
             alt="capstone"
@@ -85,10 +76,10 @@ const backgroundStyle = `background-image: url(${storyImage}); height: 500px;`;
 
         <div class="row my-4">
           <div class="col-sm-12 col-md-6">
-            <img src={sundayServiceOne} alt="sunday service" class="img-fluid shadow-sm rounded">
+            <img src="/img/story/4.jpg" alt="sunday service" class="img-fluid shadow-sm rounded">
           </div>
           <div class="col-sm-12 col-md-6">
-            <img src={sundayServiceTwo} alt="sunday service" class="img-fluid shadow-sm rounded">
+            <img src="/img/story/13.jpg" alt="sunday service" class="img-fluid shadow-sm rounded">
           </div>
         </div>
 
@@ -111,10 +102,10 @@ const backgroundStyle = `background-image: url(${storyImage}); height: 500px;`;
 
         <div class="row my-4">
           <div class="col-sm-12 col-md-6">
-            <img src={midweekServiceOne} alt="midweek service" class="img-fluid shadow-sm rounded">
+            <img src="/img/story/1.jpg" alt="midweek service" class="img-fluid shadow-sm rounded">
           </div>
           <div class="col-sm-12 col-md-6">
-            <img src={midweekServiceTwo} alt="midweek service" class="img-fluid shadow-sm rounded">
+            <img src=/img/story/1.jpg alt="midweek service" class="img-fluid shadow-sm rounded">
           </div>
         </div>
 
@@ -150,7 +141,7 @@ const backgroundStyle = `background-image: url(${storyImage}); height: 500px;`;
 
   <div style="margin-bottom: -3rem;">
     <img
-      src={storyImage}
+      src="/img/storyimage.jpg"
       alt="Capstone Church Congregation"
       class="img-fluid"
     />
