@@ -1,19 +1,49 @@
 <div>
-  <a data-bs-toggle="modal" href="#exampleModal" >
+  <a data-bs-toggle="modal" href="#menuModal" >
     <img src="/img/menu.svg" alt="menu" width="32">
   </a>
   
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-fullscreen">
+  <div class="modal fade" id="menuModal" tabindex="-1" aria-labelledby="menuModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-sm">
       <div class="modal-content">
         <div class="modal-header bg-dark text-white">
-          <h5 class="modal-title" id="exampleModalLabel">CAPSTONE</h5>
+          <h5 class="modal-title" id="menuModalLabel">CAPSTONE</h5>
           <button type="button" class="btn-close  btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body bg-dark">
-          <h5>
-            <a href="/" class="text-decoration-none text-white">Home</a>
-          </h5>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a href="/" class="nav-link text-white">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">About</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/about">About Capstone</a></li>
+                <li><a class="dropdown-item" href="/vision">Vision</a></li>
+                <li><a class="dropdown-item" href="/mission">Mission</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/community" class="nav-link text-white">Community</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Dream Team</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/serving-opportunities">Serving Opportunities</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/location" class="nav-link text-white">Location</a>
+            </li>
+            <li class="nav-item">
+                <a href="/contact" class="nav-link text-white">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <a href="/contact" class="btn btn-primary w-100">Prayer Requests</a>
         </div>
       </div>
     </div>
