@@ -4,7 +4,12 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   #hero {
-    background: linear-gradient(
+    background: url(/img/storyimage.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    /* background: linear-gradient(
       -45deg,
       #ee7752,
       #2600ff,
@@ -14,7 +19,7 @@ import Layout from "../layouts/Layout.astro";
       #000000
     );
     background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 10s ease infinite; */
   }
 
   @keyframes gradient {
@@ -32,66 +37,46 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Capstone Church">
   <div class="container-fluid" style="margin-top: -3rem;">
-    <div class="row shadow" id="hero">
-      <div class="col-12 text-center">
-        <div
-          class="d-flex align-items-center justify-content-center flex-wrap rounded"
-          style="opacity: 0.9; padding-top: 10rem; padding-bottom: 10rem;"
-        >
-          <div class="my-4 me-sm-0 me-md-4">
-            <h2 class="fw-bold bg-white px-3 py-2 mb-3">
-              <span style="font-size: large;">People becoming</span> THE CHURCH
-            </h2>
-            <h2 class="fw-bold bg-white px-3 py-2 mb-3">
-              <span style="font-size: large;">On the mission</span> WITH JESUS
-            </h2>
-            <h2 class="fw-bold mb-0 bg-white px-3 py-2">
-              <span style="font-size: large;">To help heal</span> THE WORLD
-            </h2>
-          </div>
-
-          <img
-            src="/img/capstone.png"
-            class="img-fluid rounded"
-            width="256"
-            alt="capstone"
-          />
+    <div class="row shadow" id="hero" style="padding-top: 10rem; padding-bottom: 10rem;">
+      <div class="col-sm-12 col-md-5 d-flex align-items-center text-center">
+        <div class="my-4 me-sm-0 me-md-4 bg-white p-5 shadow rounded" style="opacity: 0.9;">
+          <h1 class="text-uppercase cap-title" style="font-size: 5.1rem;">people</h1>
+          <h3 class="text-uppercase">becoming the <span>church</span></h3>
+          <h3 class="text-uppercase" style="letter-spacing: 1.8px;">on the <span>mission</span> with</h3>
+          <h1 class="text-uppercase cap-title" style="font-size: 5.1rem; letter-spacing: 18px;">JESUS</h1>
+          <h3 class="text-uppercase" style="letter-spacing: 5px;">to help <span>heal</span> the</h3>
+          <h1 class="text-uppercase cap-title" style="font-size: 5.1rem; letter-spacing: 8px;">world</h1>
         </div>
+      </div>
+      <div class="col d-flex align-items-center"></div>
+      <div class="col-sm-12 col-md-5 d-flex align-items-center text-center">
+         <div class="w-100">
+          <img
+          src="/img/capstone.png"
+          class="img-fluid rounded"
+          width="256"
+          alt="capstone"
+        />
+         </div>
       </div>
     </div>
   </div>
 
   <div class="container mb-5 mt-3">
     <div class="row mt-5 py-5">
-      <div class="col-sm-12 col-md-6 d-flex align-items-center">
-        <div>
-          <h2 class="bg-dark text-white px-3 py-2">OUR PRAYER FOR YOU</h2>
-          <h5>Ephesians 1:17-18</h5>
-        </div>
-      </div>
-      <div class="col-sm-12 col-md-6 d-flex align-items-center">
-        <div>
-          <h3 class="mb-0">Know God</h3>
-          <p class="fst-italic mb-5 text-secondary">
-            "...That you may know him better"
-          </p>
+      <div class="col-sm-12 col-md-6 mx-auto justify">
+        <h4 class="fw-bold">Hi,</h4>
+        <p>We are so glad that you are here with us today. We would love to care and connect with you, so that you may experience God's love in a special way.</p>
 
-          <h3 class="mb-0">Find Freedom</h3>
-          <p class="fst-italic mb-5 text-secondary">
-            "...That the eyes of your heart might be englightened"
-          </p>
+        <p>At Capsone, we believe in helping people know God, find freedom, discover their purpose and make a differene with their lifes so you may step into a life of fulfillment and destiny in God!</p>
 
-          <h3 class="mb-0">Discover Purpose</h3>
-          <p class="fst-italic mb-5 text-secondary">
-            "...That you may know the hope to which he has called you"
-          </p>
+        <p>We look forward to meeting you at our Guest reception after our services. Our pastors and leaders would love to further introduce you and your family to our church and help you feel at home free.</p>
 
-          <h3 class="mb-0">Make A Difference</h3>
-          <p class="fst-italic text-secondary">
-            "...That you may grasp the immensity of this glorious way of life
-            he has for his people"
-          </p>
-        </div>
+        <p>May you and your family be richly blessed through this Capstonian Experience!</p>
+
+        <p>From our family to yours,</p>
+        <h4 class="mb-0 fw-bold">Chaitanya Gera & Rebecca Janet</h4>
+        <p>Lead Pastor</p>
       </div>
     </div>
 
@@ -102,6 +87,17 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <h2 class="bg-dark text-white px-3 py-2">SUNDAY</h2>
           <h5>Celebrations</h5>
+
+          <div class="mt-4">
+            <div class="d-flex align-items-center">
+              <img src="img/clock.svg" alt="clock" class="me-2" width="32">
+              <p class="mb-0">9 AM, 11 AM.</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="img/youtube-out.svg" alt="youtube" class="me-2" width="32">
+              <p class="mb-0"><a href="https://www.youtube.com/c/CapstoneChurch">Watch us live</a> on YouTube</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-sm-12 col-md-6 d-flex align-items-center">
@@ -120,7 +116,7 @@ import Layout from "../layouts/Layout.astro";
               class="img-fluid shadow-sm rounded"
             />
           </div>
-          <div class="col-12">
+          <div class="col-12 justify bg-white shadow p-5">
             <p>
               Our services are a celebration of our awesome God who loves and cares
               for us. Experience this vibrant atmosphere of God's presence and power
@@ -144,6 +140,17 @@ import Layout from "../layouts/Layout.astro";
         <div>
           <h2 class="bg-dark text-white px-3 py-2">MID-WEEK</h2>
           <h5>Celebrations</h5>
+
+          <div class="mt-4">
+            <div class="d-flex align-items-center">
+              <img src="img/clock.svg" alt="clock" class="me-2" width="32">
+              <p class="mb-0">7 PM.</p>
+            </div>
+            <div class="d-flex align-items-center">
+              <img src="img/youtube-out.svg" alt="youtube" class="me-2" width="32">
+              <p class="mb-0"><a href="https://www.youtube.com/c/CapstoneChurch">Watch us live</a> on YouTube</p>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-sm-12 col-md-6 d-flex align-items-center">
@@ -162,7 +169,7 @@ import Layout from "../layouts/Layout.astro";
               class="img-fluid shadow-sm rounded"
             />
           </div>
-          <div class="col-12">
+          <div class="col-12 justify bg-white shadow p-5">
             <p>
               Our mid-week services are designed to help people to continue to
               experience the presence of God throughout the week and find
@@ -178,28 +185,5 @@ import Layout from "../layouts/Layout.astro";
         </div>
       </div>
     </div>
-  </div>
-
-  <!-- <div class="container-fluid">
-    <div class="row">
-      <div class="col">
-        <div class="card card-cover overflow-hidden text-bg-dark rounded-4 shadow-lg" style={backgroundStyle}>
-          <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-            <div>
-              <h3 class="pt-5 mt-5 display-6 lh-1 fw-bold">Come</h3>
-            <h3 class="pt-5 mb-4 display-6 lh-1 fw-bold">Join with us,</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-  <div style="margin-bottom: -3rem;">
-    <img
-      src="/img/storyimage.jpg"
-      alt="Capstone Church Congregation"
-      class="img-fluid"
-    />
   </div>
 </Layout>

@@ -25,7 +25,7 @@ const { title } = Astro.props as Props;
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-    <style>
+    <style is:global>
       body {
         /* font-family: 'Source Sans Pro', sans-serif; */
         font-family: 'Raleway', sans-serif;
@@ -33,50 +33,77 @@ const { title } = Astro.props as Props;
         /* --bs-secondary-rgb: 155,41,0; */
       }
 
-      .title {
-        background-color: grey;
+      .justify {
+        text-align: justify;
+      }
+
+      .cap-title {
+        font-family: Arial;
+        font-weight: 900;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
       }
     </style>
   </head>
 
   <body style="background-color: #c6ffee78;">
     <div class="mb-5">
-      <header class="d-flex justify-content-between align-items-center py-3 px-5 bg-dark" style="font-size: large;">
+      <header class="d-flex justify-content-between align-items-center py-3 px-5 bg-dark" style="font-size: small;">
         <NavMenu />
-        <ul class="nav nav-pills d-none d-md-flex">
-          <li class="nav-item">
-            <a href="/" class="nav-link text-white">Home</a>
+        <ul class="nav nav-pills d-none d-md-flex cap-title">
+          <li class="nav-item cap-title">
+            <a href="/" class="nav-link text-white cap-title">Home</a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+            <a class="nav-link text-white dropdown-toggle cap-title" data-bs-toggle="dropdown" href="#" role="button"
               aria-expanded="false">About</a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu p-4">
               <li><a class="dropdown-item" href="/about">About Capstone</a></li>
               <li><a class="dropdown-item" href="/vision">Vision</a></li>
               <li><a class="dropdown-item" href="/mission">Mission</a></li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="/community" class="nav-link text-white">Community</a>
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
               aria-expanded="false">Dream Team</a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="/serving-opportunities">Serving Opportunities</a></li>
+            <ul class="dropdown-menu p-4">
+              <li>
+                <a class="dropdown-item" href="/join-the-team">Join the team</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="/join-the-mission">Join the mission</a>
+              </li>
             </ul>
           </li>
-          <li class="nav-item">
-            <a href="/location" class="nav-link text-white">Location</a>
+          <li class="nav-item cap-title">
+            <a href="/community" class="nav-link text-white">Community</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item cap-title">
               <a href="/contact" class="nav-link text-white">Contact</a>
           </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link text-white dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+              aria-expanded="false">Connect</a>
+            <ul class="dropdown-menu p-4">
+              <li>
+                <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSfVq3NhUO-xiN7zBUK3WrYmoSLe--XF3F4AYVMSV-0wYh4HNw/viewform" >Connect with us</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSenGhBzlQ8Wg7cqLRcoOnX5VolkkWKv-d4Ty1JxUrwIrSK6Vg/viewform" >Prayer / Praise Request</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLScyOlJ2LR8QN7mMt7MsxLHuoWTCi1-z9gfFdLOxz9GsUZrFjg/viewform"  >Dream team</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="https://docs.google.com/forms/d/e/1FAIpQLSeRpoQD0rp9O3mQ5Ijwoo83uP2j0OgBx1_YNcnjmGSTFc91Mg/viewform" >growth track</a>
+              </li>
+            </ul>
+          </li>
         </ul>
-        <div class="text-end">
-          <h5 class="fw-bold mb-0 text-danger">People</h5>
-          <h5 class="fw-bold mb-0 text-danger">Becoming</h5>
-          <h5 class="fw-bold mb-0 text-danger">Church</h5>
+        <div class="text-end justify">
+          <h5 class="fw-bold mb-0 text-danger cap-title" style="letter-spacing: 6.8px;">People</h5>
+          <h5 class="fw-bold mb-0 text-danger cap-title">Becoming</h5>
+          <h5 class="fw-bold mb-0 text-danger cap-title" style="letter-spacing: 6px;">Church</h5>
         </div>
       </header>
     </div>
@@ -87,29 +114,20 @@ const { title } = Astro.props as Props;
       <div class="container">
         <footer class="py-5">
           <div class="row">
-            <div class="col-sm-12 col-md-6 my-3">
-              <h2 class="mb-0">CAPSTONE</h2>
+            <div class="col-sm-12 col-md-6 d-flex align-items-center my-3">
+              <div>
+                <h2 class="mb-0 cap-title">CAPSTONE</h2>
               <small>People Becoming Church.</small>
-              <hr>
-              <div class="d-flex justify-content-between align-items-center">
-                <small>
-                  <a href="/" class="text-white text-decoration-none">Home</a>
-                </small>
-                <small>
-                  <a href="/about" class="text-white text-decoration-none">About</a>
-                </small>
-                <small>
-                  <a href="/location" class="text-white text-decoration-none">Location</a>
-                </small>
-                <small>
-                  <a href="/contact" class="text-white text-decoration-none">Contact</a>
-                </small>
               </div>
             </div>
-            <div class="col-sm-12 col-md-6 my-3 text-end">
-              <img src="/img/facebook.svg" alt="facebook" width="32" class="mx-3">
+            <div class="col-sm-12 col-md-6 d-flex align-items-center my-3">
+              <div class="w-100 text-end">
+                <img src="/img/facebook.svg" alt="facebook" width="32" class="mx-3">
               <img src="/img/instagram.svg" alt="instagram" width="32" class="mx-3">
-              <img src="/img/youtube.svg" alt="youtube" width="32" class="mx-3">
+              <a href="https://www.youtube.com/c/CapstoneChurch">
+                <img src="/img/youtube.svg" alt="youtube" width="32" class="mx-3">
+              </a>
+              </div>
             </div>
           </div>
     
