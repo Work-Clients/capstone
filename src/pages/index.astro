@@ -33,12 +33,21 @@ import Layout from "../layouts/Layout.astro";
       background-position: 0% 50%;
     }
   }
+
+  #hero-text {
+    animation: fadeIn 8s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 0.8; }
+  }
 </style>
 
 <Layout title="Capstone Church">
   <div class="container-fluid" style="margin-top: -3rem;">
     <div class="row shadow" id="hero">
-      <div class="col-sm-12 col-md-4 bg-white" style="opacity: 0.8;">
+      <div class="col-sm-12 col-md-4 bg-white" style="opacity: 0.8;" id="hero-text">
         <div class="my-4 me-sm-0 me-md-4 text-center" style="padding-top: 5rem; padding-bottom: 5rem;">
           <img
           src="/img/cap-15.jpeg"
