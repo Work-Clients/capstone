@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   #hero {
-    background: url(/img/storyimage.jpg) no-repeat center center fixed; 
+    background: url(/img/storyimage.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -38,30 +38,88 @@ import Layout from "../layouts/Layout.astro";
     animation: fadeIn 8s;
   }
 
+  .fade-in {
+    animation: fadeIn 8s;
+  }
+
   @keyframes fadeIn {
-    0% { opacity: 0; }
-    100% { opacity: 0.8; }
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.8;
+    }
   }
 </style>
 
 <Layout title="Capstone Church">
   <div class="container-fluid" style="margin-top: -3rem;">
     <div class="row shadow" id="hero">
-      <div class="col-sm-12 col-md-4 bg-white" style="opacity: 0.8;" id="hero-text">
-        <div class="my-4 me-sm-0 me-md-4 text-center" style="padding-top: 5rem; padding-bottom: 5rem;">
+      <div class="col-sm-12 col-md-4 bg-white fade-in" style="opacity: 0.8;">
+        <div
+          class="my-4 me-sm-0 me-md-4 text-center"
+          style="padding-top: 5rem; padding-bottom: 5rem;"
+        >
           <img
-          src="/img/cap-15.jpeg"
-          class="img-fluid rounded"
-          width="256"
-          alt="capstone"
-        />
+            src="/img/cap-15.jpeg"
+            class="img-fluid rounded"
+            width="256"
+            alt="capstone"
+          />
           <div class="mt-5">
-            <h1 class="text-uppercase cap-title" style="font-size: 5.1rem;">people</h1>
+            <h1 class="text-uppercase cap-title" style="font-size: 5.1rem;">
+              people
+            </h1>
             <h3 class="text-uppercase">becoming the <span>church</span></h3>
-            <h3 class="text-uppercase" style="letter-spacing: 1.8px;">on the <span>mission</span> with</h3>
-            <h1 class="text-uppercase cap-title" style="font-size: 5.1rem; letter-spacing: 18px;">JESUS</h1>
-            <h3 class="text-uppercase" style="letter-spacing: 5px;">to help <span>heal</span> the</h3>
-            <h1 class="text-uppercase cap-title" style="font-size: 5.1rem; letter-spacing: 8px;">world</h1>
+            <h3 class="text-uppercase" style="letter-spacing: 1.8px;">
+              on the <span>mission</span> with
+            </h3>
+            <h1
+              class="text-uppercase cap-title"
+              style="font-size: 5.1rem; letter-spacing: 18px;"
+            >
+              JESUS
+            </h1>
+            <h3 class="text-uppercase" style="letter-spacing: 5px;">
+              to help <span>heal</span> the
+            </h3>
+            <h1
+              class="text-uppercase cap-title"
+              style="font-size: 5.1rem; letter-spacing: 8px;"
+            >
+              world
+            </h1>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-8 bg-white fade-in" style="opacity: 0.8;">
+        <div class="p-5">
+          <h5 class="fw-bold">Upcoming Events</h5>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-1.jpg" alt="ev-1" />
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-3.jpg" alt="ev-3" />
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-4.jpg" alt="ev-4" />
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-2.jpg" alt="ev-2" />
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-6.jpg" alt="ev-6" />
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-7.jpg" alt="ev-7" />
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-8.jpg" alt="ev-8" />
+            </div>
+            <div class="col-sm-12 col-md-6 mb-4">
+              <img class="w-100 rounded" src="img/ev-5.jpg" alt="ev-5" />
+            </div>
           </div>
         </div>
       </div>
@@ -72,13 +130,28 @@ import Layout from "../layouts/Layout.astro";
     <div class="row mt-5 py-5">
       <div class="col-sm-12 col-md-6 mx-auto justify">
         <h4 class="fw-bold">Hi,</h4>
-        <p>We are so glad that you are here with us today. We would love to care and connect with you, so that you may experience God's love in a special way.</p>
+        <p>
+          We are so glad that you are here with us today. We would love to care
+          and connect with you, so that you may experience God's love in a
+          special way.
+        </p>
 
-        <p>At Capsone, we believe in helping people know God, find freedom, discover their purpose and make a differene with their lifes so you may step into a life of fulfillment and destiny in God!</p>
+        <p>
+          At Capsone, we believe in helping people know God, find freedom,
+          discover their purpose and make a differene with their lifes so you
+          may step into a life of fulfillment and destiny in God!
+        </p>
 
-        <p>We look forward to meeting you at our Guest reception after our services. Our pastors and leaders would love to further introduce you and your family to our church and help you feel at home free.</p>
+        <p>
+          We look forward to meeting you at our Guest reception after our
+          services. Our pastors and leaders would love to further introduce you
+          and your family to our church and help you feel at home free.
+        </p>
 
-        <p>May you and your family be richly blessed through this Capstonian Experience!</p>
+        <p>
+          May you and your family be richly blessed through this Capstonian
+          Experience!
+        </p>
 
         <p>From our family to yours,</p>
         <h4 class="mb-0 fw-bold">Chaitanya Gera & Rebecca Janet</h4>
@@ -86,7 +159,7 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </div>
 
-    <hr>
+    <hr />
 
     <div class="row my-5">
       <div class="col-sm-12 col-md-6 d-flex align-items-center">
@@ -96,7 +169,12 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="mt-4">
             <div class="">
-              <img src="img/clock.svg" alt="clock" class="me-2 mb-3" width="32">
+              <img
+                src="img/clock.svg"
+                alt="clock"
+                class="me-2 mb-3"
+                width="32"
+              />
               <div class="mb-5">
                 <h5 class="fw-bold mb-0">English Service</h5>
                 <p class="mb-0">10 AM.</p>
@@ -107,8 +185,17 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
             <div class="d-flex align-items-center">
-              <img src="img/youtube-out.svg" alt="youtube" class="me-2" width="32">
-              <p class="mb-0"><a href="https://www.youtube.com/c/CapstoneChurch">Watch us live</a> on YouTube</p>
+              <img
+                src="img/youtube-out.svg"
+                alt="youtube"
+                class="me-2"
+                width="32"
+              />
+              <p class="mb-0">
+                <a href="https://www.youtube.com/c/CapstoneChurch"
+                  >Watch us live</a
+                > on YouTube
+              </p>
             </div>
           </div>
         </div>
@@ -131,22 +218,22 @@ import Layout from "../layouts/Layout.astro";
           </div>
           <div class="col-12 justify bg-white shadow p-5">
             <p>
-              Our services are a celebration of our awesome God who loves and cares
-              for us. Experience this vibrant atmosphere of God's presence and power
-              through our pre-service prayer, passionate worship, dynamic preaching
-              and a time of receving personal ministry.
+              Our services are a celebration of our awesome God who loves and
+              cares for us. Experience this vibrant atmosphere of God's presence
+              and power through our pre-service prayer, passionate worship,
+              dynamic preaching and a time of receving personal ministry.
             </p>
-    
+
             <p>
-              Catch our sermon series and be transformed as you hear the word of God
-              from our pastors and guest speakers from all over the world.
+              Catch our sermon series and be transformed as you hear the word of
+              God from our pastors and guest speakers from all over the world.
             </p>
           </div>
         </div>
       </div>
     </div>
 
-    <hr>
+    <hr />
 
     <div class="row my-5">
       <div class="col-sm-12 col-md-6 d-flex align-items-center">
@@ -156,12 +243,21 @@ import Layout from "../layouts/Layout.astro";
 
           <div class="mt-4">
             <div class="d-flex align-items-center">
-              <img src="img/clock.svg" alt="clock" class="me-2" width="32">
+              <img src="img/clock.svg" alt="clock" class="me-2" width="32" />
               <p class="mb-0">7 PM.</p>
             </div>
             <div class="d-flex align-items-center">
-              <img src="img/youtube-out.svg" alt="youtube" class="me-2" width="32">
-              <p class="mb-0"><a href="https://www.youtube.com/c/CapstoneChurch">Watch us live</a> on YouTube</p>
+              <img
+                src="img/youtube-out.svg"
+                alt="youtube"
+                class="me-2"
+                width="32"
+              />
+              <p class="mb-0">
+                <a href="https://www.youtube.com/c/CapstoneChurch"
+                  >Watch us live</a
+                > on YouTube
+              </p>
             </div>
           </div>
         </div>
@@ -188,7 +284,7 @@ import Layout from "../layouts/Layout.astro";
               experience the presence of God throughout the week and find
               inspiration to grow.
             </p>
-    
+
             <p>
               Online telugu service every wednesday at 7PM only on Facebook and
               YouTube. Monthly fasting service both in-person & online on
