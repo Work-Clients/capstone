@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   #hero {
-    background: url(/img/storyimage_2.JPG) no-repeat center center fixed;
+    /* background: url(/img/storyimage_2.JPG) no-repeat center center fixed; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -54,9 +54,9 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Capstone Church">
   <div class="container-fluid" style="margin-top: -3rem;">
-    <div class="row shadow" id="hero" style="padding-top: 14rem; padding-bottom: 14rem;">
+    <div class="row shadow" id="hero" style="padding-top: 25rem; padding-bottom: 1rem;">
       <div class="col-sm-12 col-md-8 mx-auto bg-white rounded my-4 fade-in" style="opacity: 0.9;">
-        <div class="p-md-5 py-4">
+        <div class="p-md-2 py-4">
           <!-- <h3 class="fw-bold">OUR SERVICES</h3> -->
           <div class="row mt-3">
             <div class="col-12">
@@ -237,3 +237,40 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 </Layout>
+
+<script>
+  function changeBackgroundImage() {
+  // Get a reference to the div element
+  const div = document.getElementById("hero"); // Replace "yourDivId" with the actual ID of your div
+
+  // Get the current index of the image
+  let imageIndex = 1; // Assuming initially first image is displayed
+
+  // Check if there's a previously stored index in localStorage
+  if (localStorage.getItem("backgroundImageIndex")) {
+    imageIndex = parseInt(localStorage.getItem("backgroundImageIndex"));
+  }
+
+  console.log((imageIndex + 1) % 8);
+  // Update the image index for the next iteration
+  imageIndex = (imageIndex + 1) % 8;
+  
+  if (imageIndex == 0) {
+    imageIndex = 1;
+  }
+
+  div.style.transition = "background-image 3s ease-in-out";
+
+  // Set the background image of the div
+  div.style.backgroundImage = `url(/img/scroll/${imageIndex}.JPG)`;
+
+  // Store the image index in localStorage for continuity across page reloads
+  localStorage.setItem("backgroundImageIndex", imageIndex.toString());
+}
+
+// Call the function initially to set the first image
+changeBackgroundImage();
+
+// Set an interval to call the function every 10 seconds
+setInterval(changeBackgroundImage, 10000);
+</script>
