@@ -4,7 +4,7 @@ import Layout from "../layouts/Layout.astro";
 
 <style>
   #hero {
-    /* background: url(/img/storyimage_2.JPG) no-repeat center center fixed; */
+    background: url(/img/storyimage.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -56,17 +56,6 @@ import Layout from "../layouts/Layout.astro";
   <div class="container-fluid" style="margin-top: -3rem;">
     <div class="row shadow" id="hero" style="padding-top: 25rem; padding-bottom: 1rem;">
       <div class="col-sm-12 col-md-8 mx-auto bg-white rounded my-4 fade-in" style="opacity: 0.9;">
-        <div class="p-md-2 py-4">
-          <!-- <h3 class="fw-bold">OUR SERVICES</h3> -->
-          <div class="row mt-3">
-            <div class="col-12">
-              <img src="/img/services.jpg" alt="good-friday" class="w-100">
-              <div class="text-center mt-3">
-                <a href="#updates" class="btn btn-dark btn-sm">View Updates</a>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -102,9 +91,9 @@ import Layout from "../layouts/Layout.astro";
           <div>
             <p>From our family to yours,</p>
             <h4 class="mb-0 fw-bold">Chaitanya Gera & Rebecca Janet</h4>
-            <p>Lead Pastor</p>
+            <p>Lead Pastor's</p>
           </div>
-          <img src="/img/c_r.jpg" alt="c_r" class="w-25">
+          <img src="/img/c_r_1.jpg" alt="c_r" class="w-25">
         </div>
       </div>
     </div>
@@ -115,18 +104,21 @@ import Layout from "../layouts/Layout.astro";
       <div class="col-12">
         <h2 class="bg-dark text-white px-3 py-2">UPDATES</h2>
       </div>
-      <div class="col-sm-12 col-md-6 mb-3">
-        <img src="/img/2025/palmsunday.webp" alt="palmsunday" class="img-fluid shadow-sm rounded" />
+      <div class="row">
+      <div class="col-sm-12 col-md-6 mx-auto mb-3">
+        <img src="/img/updates/3.png" alt="sunday" class="img-fluid shadow-sm rounded" />
       </div>
-      <div class="col-sm-12 col-md-6 mb-3">
-        <img src="/img/2025/passionweek.webp" alt="passionweek" class="img-fluid shadow-sm rounded" />
+    </div>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 mx-auto mb-3">
+        <img src="/img/updates/2.jpg" alt="plugin" class="img-fluid shadow-sm rounded" />
       </div>
-      <div class="col-sm-12 col-md-6 mb-3">
-        <img src="/img/2025/goodfriday.webp" alt="goodfriday" class="img-fluid shadow-sm rounded" />
+    </div>
+      <div class="row">
+      <div class="col-sm-12 col-md-6 mx-auto mb-3">
+        <img src="/img/updates/1.png" alt="outing" class="img-fluid shadow-sm rounded" />
       </div>
-      <div class="col-sm-12 col-md-6 mb-3">
-        <img src="/img/2025/easter.webp" alt="easter" class="img-fluid shadow-sm rounded" />
-      </div>
+    </div>
     </div>
 
     <hr />
@@ -154,8 +146,8 @@ import Layout from "../layouts/Layout.astro";
                 <p class="mb-0">10 AM.</p>
               </div>
               <div class="mb-5">
-                <h5 class="fw-bold mb-0">हिन्दी आराधना</h5>
-                <p class="mb-0">12:30 PM.</p>
+                <h5 class="fw-bold mb-0">Sunday School</h5>
+                <p class="mb-0">10:30 AM.</p>
               </div>
               <div class="mb-5">
                 <h5 class="fw-bold mb-0">Youth Service</h5>
@@ -221,9 +213,6 @@ import Layout from "../layouts/Layout.astro";
               God from our pastors and guest speakers from all over the world.
             </p>
           </div>
-          <div class="col-12">
-            <h5 class="fw-bold">Youth Service</h5>
-          </div>
           <div class="col-sm-12 col-md-6 mb-3">
             <img
               src="/img/story/19.jpg"
@@ -237,9 +226,6 @@ import Layout from "../layouts/Layout.astro";
               alt="sunday service"
               class="img-fluid shadow-sm rounded"
             />
-          </div>
-          <div class="col-12">
-            <h5 class="fw-bold">Hindi Service</h5>
           </div>
           <div class="col-sm-12 col-md-6 mb-3">
             <img
@@ -260,40 +246,3 @@ import Layout from "../layouts/Layout.astro";
     </div>
   </div>
 </Layout>
-
-<script>
-  function changeBackgroundImage() {
-  // Get a reference to the div element
-  const div = document.getElementById("hero"); // Replace "yourDivId" with the actual ID of your div
-
-  // Get the current index of the image
-  let imageIndex = 1; // Assuming initially first image is displayed
-
-  // Check if there's a previously stored index in localStorage
-  if (localStorage.getItem("backgroundImageIndex")) {
-    imageIndex = parseInt(localStorage.getItem("backgroundImageIndex"));
-  }
-
-  console.log((imageIndex + 1) % 8);
-  // Update the image index for the next iteration
-  imageIndex = (imageIndex + 1) % 8;
-  
-  if (imageIndex == 0) {
-    imageIndex = 1;
-  }
-
-  div.style.transition = "background-image 1s ease-in-out";
-
-  // Set the background image of the div
-  div.style.backgroundImage = `url(/img/scroll/${imageIndex}.JPG)`;
-
-  // Store the image index in localStorage for continuity across page reloads
-  localStorage.setItem("backgroundImageIndex", imageIndex.toString());
-}
-
-// Call the function initially to set the first image
-changeBackgroundImage();
-
-// Set an interval to call the function every 10 seconds
-setInterval(changeBackgroundImage, 10000);
-</script>
